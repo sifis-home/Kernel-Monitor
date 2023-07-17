@@ -23,11 +23,16 @@ def publish_thread(data):
     # Concatenate the time and the hash
     request_id = str(requestor_id) + str(now) + hash_value
     request_id = (
-        re.sub("[^a-zA-Z0-9\n\.]", "", request_id).replace("\n", "").replace(" ", "")
+        re.sub("[^a-zA-Z0-9\n\.]", "", request_id)
+        .replace("\n", "")
+        .replace(" ", "")
     )
 
     ws = websocket.WebSocketApp(
-        "ws://localhost:3000/ws", on_open=on_open, on_error=on_error, on_close=on_close
+        "ws://localhost:3000/ws",
+        on_open=on_open,
+        on_error=on_error,
+        on_close=on_close,
     )
 
     def send_data():
