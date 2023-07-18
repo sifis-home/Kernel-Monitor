@@ -3,6 +3,7 @@ FROM python:3.9
 # Copia il file Python nel container
 COPY kernel_monitor.py .
 COPY requirements.txt .
+COPY send_data.py .
 # Installa le dipendenze del file Python se necessario
 RUN pip install --no-cache-dir -r requirements.txt
 RUN apt-get update && apt-get install -y strace
