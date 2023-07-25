@@ -16,4 +16,4 @@
 [codecov badge]: https://codecov.io/gh/sifis-home/Kernel-Monitor/branch/master/graph/badge.svg
 [license badge]: https://img.shields.io/badge/license-MIT-blue.svg
 
-docker run --net=host -e ARGUMENT=source_file-v /path_to_source_file/$ARGUMENT:/app/$ARGUMENT kernel_monitor $ARGUMENT
+# docker run --net=host -e ARGUMENT=source_file-v /path_to_source_file/$ARGUMENT:/app/$ARGUMENT kernel_monitor $ARGUMENT
